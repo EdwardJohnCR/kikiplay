@@ -1,0 +1,130 @@
+body
+{
+    background-color: #539dcf;
+    text-shadow: 1px 1px 0px #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant-position: super;
+    
+}
+/*#############################*/
+/*############################*/
+#selectPet{
+    text-align: center;
+}
+#titleProyect{
+    text-align: center;
+
+}
+#selectAttack{
+    text-align: center;
+}
+#petPlayer{
+    color:rgb(201, 29, 29);
+    font-size: 20px;
+}
+#messages{
+    text-align: center;
+    
+}
+#reset{
+    text-align:center;
+}
+/*#############################*/
+/*############################*/
+#selectButton{
+    font-family: Arial;
+    font-weight: bold;
+    color: #ececec !important;
+    font-size: 20px;
+    text-shadow: 1px 1px 0px /*#7CACDE;*/#397c12;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: /*#397c12;*/#7CACDE;
+    background: linear-gradient(to top, /*#63B8EE,*/#397c12,/* #468CCF*/#9ef76a);
+}
+#selectButton:hover
+{
+    color: #ffffff !important;
+    
+    text-shadow: rgb(255, 255, 255);
+    background: #000000;
+    background: linear-gradient(to top, #1bb140, #8fe974);
+}
+#buttonReset{
+
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff !important;
+    font-size: 20px;
+    text-shadow: 1px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: #397c12;
+    background: linear-gradient(to top, #63B8EE, #468CCF);
+ 
+}
+#buttonReset:hover{
+    color: #130d0f;
+    background: #46cf9b;
+    background: linear-gradient(to top, #46cf5d, #b2ee63);
+}
+
+#buttonFire {
+    font-family: arial;
+    font-weight: bold;
+    color: #FCFFFD !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #000000;
+    box-shadow: 0px 2px 6px #000000;
+    padding: 9px 19px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: #EEEE21;
+    background: linear-gradient(to top, #EEEE21, #CF0000);
+  }
+#buttonFire:hover {
+    color: #FFFFFF !important;
+    background: #CF0000;
+    background: linear-gradient(to top, #CF0000, #EEEE21);
+  }
+#buttonWater{
+    font-family: arial;
+    font-weight: bold;
+    color: #FCFFFD !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #000000;
+    box-shadow: 0px 2px 6px #000000;
+    padding: 9px 19px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: #085B80;
+    background: linear-gradient(to top, #085B80, #11C8FF);
+  }
+#buttonWater:hover {
+    color: #FFFFFF !important;
+    background: #11C8FF;
+    background: linear-gradient(to top, #11C8FF, #085B80);
+  }
+#buttonEarth {
+    font-family: arial;
+    font-weight: bold;
+    color: #FCFFFD !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #000000;
+    box-shadow: 0px 2px 6px #000000;
+    padding: 9px 19px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: #804517;
+    background: linear-gradient(to top, #804517, #FFBD7A);
+  }
+#buttonEarth:hover {
+    color: #FFFFFF !important;
+    background: #FFBD7A;
+    background: linear-gradient(to top, #FFBD7A, #804517);
+  }
+  

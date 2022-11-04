@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>kikiplay</title>
+    <link rel="stylesheet" href="css/estilos.css" />
     <script src="./js/kikiplay.js"></script>
   </head>
   <body>
-    <h1>kikiplay🔥💧🌱</h1>
-    <section id="seleccionar-mascota">
+    <h1 id="titleProyect" >kikiplay🔥💧🌱</h1>
+    <section id="selectPet">
       <h2>Elige tu mascota:</h2>
       <label for="hipodoge">Hipodoge</label>
       <input type="radio" name="mascota" id="hipodoge" />
@@ -15,26 +16,26 @@
       <input type="radio" name="mascota" id="capipepo" />
       <label for="ratigueya">Ratigueya</label>
       <input type="radio" name="mascota" id="ratigueya" />
-      <button id="boton-mascota">Seleccionar</button>
+      <button id="selectButton">Seleccionar</button>
       </section>
-    <section id="seleccionar-ataque">
+    <section id="selectAttack">
       <h2>Elige tu ataque:</h2>
-      <p>Tu mascota tiene <span>3</span> vidas</p>
-      <p>Las mascota del enemigo tiene <span>3</span> vidas</p>
+      <p>Tu mascota <span id= "petPlayer"></span> tiene <span id= "lifePetPlayer">3</span> vidas</p>
+      <p>Las mascota <span id= "petEnemy"></span> del enemigo tiene <span>3</span> vidas</p>
       <p>
-        <button id="boton-fuego">Fuego 🔥</button>
-        <button id="boton-agua">Agua 💧</button>
-        <button id="boton-tierra">Tierra 🌱</button>
+        <button id="buttonFire">Fuego 🔥</button>
+        <button id="buttonWater">Agua 💧</button>
+        <button id="buttonEarth">Tierra 🌱</button>
       </p>
     </section>
-    <section id="mensajes">
+    <section id="messages">
       <p>
         Tu mascota atacó con FUEGO, las mascota del enemigo atacó con TIERRA -
         GANASTE 🎉
       </p>
     </section>
-    <section id="reiniciar">
-      <button id="boton-reiniciar">Reiniciar</button>
+    <section id="reset">
+      <button id="buttonReset">Reiniciar</button>
     </section>
 
   </body>
