@@ -6,7 +6,7 @@ body {
 }
 /*#############################*/
 /*############################*/
-#selectPetPlayer {
+#selectPet {
   text-align: center;
 }
 #titleProyect {
@@ -43,7 +43,7 @@ body {
 }
 /*#############################*/
 /*############################*/
-#selectButton {
+#buttonSelect {
   font-family: Arial;
   font-weight: bold;
   color: #ececec !important;
