@@ -63,20 +63,19 @@ function petEnemyRandom() {
 
 function attackEnemyRandom() {
   let attackRandom = randonData(1, 3);
-  let spanViewAttack = document.getElementById("atackRandomEnemy");
-
+  
   if (attackRandom == 1) {
-    spanViewAttack.innerHTML = "Fuego";
+    attackEnemy = "Fuego";
     /*Fuego*/
   } else if (attackRandom == 2) {
-    spanViewAttack.innerHTML = "Agua";
+    attackEnemy = "Agua";
     /*Agua*/
   } else {
-    spanViewAttack.innerHTML = "Earth";
+    attackEnemy = "Earth";
     /*tierra*/
   }
 }
-
+4
 //Attack to variable global
 
 function attackFire() {
@@ -90,6 +89,11 @@ function attackWater() {
 function attackEarth() {
   attackPlayer = "Tierra";
   attackEnemyRandom();
+}
+
+function createMessage(){
+  let paragraph = document.createElement('p')
+  paragraph.innerHTML = 'Tu mascota atacó con' + attackPlayer + ', la mascota del enemigo atacó con' + attackEnemy '- PENDIENTE'
 }
 
 function randonData(min, max) {
