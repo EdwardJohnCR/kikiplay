@@ -24,6 +24,7 @@ function selectPetPlayer() {
   let spanPetPlayer = document.getElementById("petPlayer");
   let spanSelectPetView = document.getElementById("petPlayer");
   let spanLifePetPlaye = document.getElementById("lifePetPlayer");
+
   if (inputHipodoge.checked) {
     spanPetPlayer.innerHTML = "Hipodoge";
     spanLifePetPlaye.innerHTML = "3";
@@ -63,7 +64,7 @@ function petEnemyRandom() {
 
 function attackEnemyRandom() {
   let attackRandom = randonData(1, 3);
-  
+
   if (attackRandom == 1) {
     attackEnemy = "Fuego";
     /*Fuego*/
@@ -71,11 +72,24 @@ function attackEnemyRandom() {
     attackEnemy = "Agua";
     /*Agua*/
   } else {
-    attackEnemy = "Earth";
+    attackEnemy = "Tierra";
     /*tierra*/
   }
+  combat();
 }
-4
+function combat() {
+  if (attackEnemy == attackPlayer) {
+    createMessage("EMPATE");
+  } else if (attackPlayer == "FUEGO" && attackEnemy == "TIERRA") {
+    createMessage("GANASTE");
+  } else if (attackPlayer == "AGUA" && attackEnemy == "FUEGO") {
+    createMessage("GANASTE");
+  } else if (attackPlayer == "TIERRA" && attackEnemy == "AGUA") {
+    createMessage("GANASTE");
+  } else {
+    createMessage("PERDISTE");
+  }
+}
 //Attack to variable global
 
 function attackFire() {
@@ -91,9 +105,19 @@ function attackEarth() {
   attackEnemyRandom();
 }
 
-function createMessage(){
-  let paragraph = document.createElement('p')
-  paragraph.innerHTML = 'Tu mascota atacó con' + attackPlayer + ', la mascota del enemigo atacó con' + attackEnemy '- PENDIENTE'
+function createMessage(result) {
+  let sectionMessage = document.getElementById("messages");
+
+  let paragraph = document.createElement("p");
+  paragraph.innerHTML =
+    "Tu mascota atacó con " +
+    attackPlayer +
+    ", la mascota del enemigo atacó con " +
+    attackEnemy +
+    " " +
+    result;
+
+  sectionMessage.appendChild(paragraph);
 }
 
 function randonData(min, max) {
