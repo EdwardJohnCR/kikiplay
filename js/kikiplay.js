@@ -1,16 +1,18 @@
 //funtion Global
 let attackPlayer;
+let attackEnemy;
 
 //Listener the event
 function runPlay() {
   let buttonPetPlayer = document.getElementById("buttonSelect");
   buttonPetPlayer.addEventListener("click", selectPetPlayer);
-  btnFire.addEventListener("click", attackFire);
 
   let btnFire = document.getElementById("buttonFire");
   btnFire.addEventListener("click", attackFire);
+
   let btnWater = document.getElementById("buttonWater");
   btnWater.addEventListener("click", attackWater);
+
   let btnEarth = document.getElementById("buttonEarth");
   btnEarth.addEventListener("click", attackEarth);
 }
@@ -37,7 +39,6 @@ function selectPetPlayer() {
     spanLifePetPlaye.innerHTML = "<=====";
   }
   petEnemyRandom();
-  attackEnemyRandom();
 }
 //randon enemy
 function petEnemyRandom() {
@@ -75,18 +76,20 @@ function attackEnemyRandom() {
     /*tierra*/
   }
 }
+
 //Attack to variable global
+
 function attackFire() {
-  attackPlayer = "Fire";
-  alert(attackPlayer);
+  attackPlayer = "Fuego";
+  attackEnemyRandom();
 }
 function attackWater() {
-  attackPlayer = "Water";
-  alert(attackPlayer);
+  attackPlayer = "Agua";
+  attackEnemyRandom();
 }
 function attackEarth() {
-  attackPlayer = "Earth";
-  alert(attackPlayer);
+  attackPlayer = "Tierra";
+  attackEnemyRandom();
 }
 
 function randonData(min, max) {

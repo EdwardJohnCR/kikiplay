@@ -30,6 +30,11 @@ body {
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
+#atackRandomEnemy {
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000000;
+}
 #lifePetEnemy {
   color: #ffffff;
   font-size: 20px;
