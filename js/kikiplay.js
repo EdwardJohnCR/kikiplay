@@ -78,21 +78,27 @@ function attackEnemyRandom() {
   combat();
 }
 function combat() {
-  let spanLifePetPlaye = document.getElementById("lifePetPlayer");
+  let spanLifePetPlayer = document.getElementById("lifePetPlayer");
   let spanLifePetEnemy = document.getElementById("lifePetEnemy");
 
   if (attackEnemy == attackPlayer) {
     createMessage("EMPATE");
   } else if (attackPlayer == "Fuego" && attackEnemy == "Tierra") {
     createMessage("GANASTE");
+    lifeEnemy--;
+    spanLifePetEnemy.innerHTML = lifeEnemy;
   } else if (attackPlayer == "Agua" && attackEnemy == "Fuego") {
     createMessage("GANASTE");
+    lifeEnemy--;
+    spanLifePetEnemy.innerHTML = lifeEnemy;
   } else if (attackPlayer == "Tierra" && attackEnemy == "Agua") {
     createMessage("GANASTE");
+    lifeEnemy--;
+    spanLifePetEnemy.innerHTML = lifeEnemy;
   } else {
     createMessage("PERDISTE");
     lifePlayer--;
-    spanLifePetEnemy.innerHTML = lifePlayer;
+    spanLifePetPlayer.innerHTML = lifePlayer;
   }
 }
 //Attack to variable global
