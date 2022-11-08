@@ -1,6 +1,8 @@
 //funtion Global
 let attackPlayer;
 let attackEnemy;
+let lifePlayer = 3;
+let lifeEnemy = 3;
 
 //Listener the event
 function runPlay() {
@@ -23,7 +25,6 @@ function selectPetPlayer() {
   let inputRatigueya = document.getElementById("ratigueya");
   let spanPetPlayer = document.getElementById("petPlayer");
   let spanSelectPetView = document.getElementById("petPlayer");
-  let spanLifePetPlaye = document.getElementById("lifePetPlayer");
 
   if (inputHipodoge.checked) {
     spanPetPlayer.innerHTML = "Hipodoge";
@@ -45,7 +46,6 @@ function selectPetPlayer() {
 function petEnemyRandom() {
   let enemyRandom = randonData(1, 3);
   let spanPetEnemy = document.getElementById("petEnemy");
-  let spanLifePetEnemy = document.getElementById("lifePetEnemy");
 
   if (enemyRandom == 1) {
     spanPetEnemy.innerHTML = "Hipodoge";
@@ -78,16 +78,21 @@ function attackEnemyRandom() {
   combat();
 }
 function combat() {
+  let spanLifePetPlaye = document.getElementById("lifePetPlayer");
+  let spanLifePetEnemy = document.getElementById("lifePetEnemy");
+
   if (attackEnemy == attackPlayer) {
     createMessage("EMPATE");
-  } else if (attackPlayer == "FUEGO" && attackEnemy == "TIERRA") {
+  } else if (attackPlayer == "Fuego" && attackEnemy == "Tierra") {
     createMessage("GANASTE");
-  } else if (attackPlayer == "AGUA" && attackEnemy == "FUEGO") {
+  } else if (attackPlayer == "Agua" && attackEnemy == "Fuego") {
     createMessage("GANASTE");
-  } else if (attackPlayer == "TIERRA" && attackEnemy == "AGUA") {
+  } else if (attackPlayer == "Tierra" && attackEnemy == "Agua") {
     createMessage("GANASTE");
   } else {
     createMessage("PERDISTE");
+    lifePlayer--;
+    spanLifePetEnemy.innerHTML = lifePlayer;
   }
 }
 //Attack to variable global
