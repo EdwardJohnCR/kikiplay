@@ -11,12 +11,13 @@ function runPlay() {
 
   let btnFire = document.getElementById("buttonFire");
   btnFire.addEventListener("click", attackFire);
-
   let btnWater = document.getElementById("buttonWater");
   btnWater.addEventListener("click", attackWater);
-
   let btnEarth = document.getElementById("buttonEarth");
   btnEarth.addEventListener("click", attackEarth);
+
+  let buttonGameReset = document.getElementById("buttonReset");
+  buttonGameReset.addEventListener("click", resetGame);
 }
 //select character
 function selectPetPlayer() {
@@ -28,18 +29,15 @@ function selectPetPlayer() {
 
   if (inputHipodoge.checked) {
     spanPetPlayer.innerHTML = "Hipodoge";
-    spanLifePetPlaye.innerHTML = "3";
   } else if (inputCapipepo.checked) {
     spanPetPlayer.innerHTML = "Capipepo";
-    spanLifePetPlaye.innerHTML = "3";
   } else if (inputRatigueya.checked) {
     spanPetPlayer.innerHTML = "Ratigueya";
-    spanLifePetPlaye.innerHTML = "3";
   } else {
     alert("Selecciona una mascota");
     spanSelectPetView.innerHTML = "Selecione una mascota";
-    spanLifePetPlaye.innerHTML = "<=====";
   }
+
   petEnemyRandom();
 }
 //randon enemy
@@ -61,7 +59,7 @@ function petEnemyRandom() {
     /*Ratigueya*/
   }
 }
-
+//Attack Enemy Random
 function attackEnemyRandom() {
   let attackRandom = randonData(1, 3);
 
@@ -77,6 +75,7 @@ function attackEnemyRandom() {
   }
   combat();
 }
+//logic combat
 function combat() {
   let spanLifePetPlayer = document.getElementById("lifePetPlayer");
   let spanLifePetEnemy = document.getElementById("lifePetEnemy");
@@ -100,6 +99,8 @@ function combat() {
     lifePlayer--;
     spanLifePetPlayer.innerHTML = lifePlayer;
   }
+
+  reviewLives();
 }
 //Attack to variable global
 
@@ -116,6 +117,14 @@ function attackEarth() {
   attackEnemyRandom();
 }
 
+function reviewLives() {
+  if (lifeEnemy == 0) {
+    createEndMessage("GANASTE");
+  } else if (lifePlayer == 0) {
+    createEndMessage("PERDISTE :( ");
+  }
+}
+//sen message to HTML
 function createMessage(result) {
   let sectionMessage = document.getElementById("messages");
 
@@ -131,6 +140,27 @@ function createMessage(result) {
   sectionMessage.appendChild(paragraph);
 }
 
+function createEndMessage(resultEnd) {
+  let sectionMessage = document.getElementById("messages");
+
+  let paragraph = document.createElement("p");
+  paragraph.innerHTML = resultEnd;
+
+  sectionMessage.appendChild(paragraph);
+
+  let btnFire = document.getElementById("buttonFire");
+  btnFire.disabled = true;
+  let btnWater = document.getElementById("buttonWater");
+  btnWater.disabled = true;
+  let btnEarth = document.getElementById("buttonEarth");
+  btnEarth.disabled = true;
+}
+
+function resetGame() {
+  location.reload();
+}
+
+//Create randon number 1,2 or 3
 function randonData(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
