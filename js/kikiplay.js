@@ -8,6 +8,8 @@ let lifeEnemy = 3;
 function runPlay() {
   let buttonPetPlayer = document.getElementById("buttonSelect");
   buttonPetPlayer.addEventListener("click", selectPetPlayer);
+  selectAttack.style.display = "none";
+  reset.style.display = "none";
 
   let btnFire = document.getElementById("buttonFire");
   btnFire.addEventListener("click", attackFire);
@@ -21,6 +23,9 @@ function runPlay() {
 }
 //select character
 function selectPetPlayer() {
+  selectPet.style.display = "none";
+  selectAttack.style.display = "block";
+
   let inputHipodoge = document.getElementById("hipodoge");
   let inputCapipepo = document.getElementById("capipepo");
   let inputRatigueya = document.getElementById("ratigueya");
@@ -141,6 +146,8 @@ function createMessage(result) {
 }
 
 function createEndMessage(resultEnd) {
+  selectAttack.style.display = "none";
+  reset.style.display = "block";
   let sectionMessage = document.getElementById("messages");
 
   let paragraph = document.createElement("p");
