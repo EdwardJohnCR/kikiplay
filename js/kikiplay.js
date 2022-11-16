@@ -24,6 +24,8 @@ function runPlay() {
 //select character
 function selectPetPlayer() {
   selectPet.style.display = "none";
+  titleSelectPet.style.display = "none";
+  sectionButtonSelect.style.display = "none";
   selectAttack.style.display = "block";
 
   let inputHipodoge = document.getElementById("hipodoge");
