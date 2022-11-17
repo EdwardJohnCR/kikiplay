@@ -7,70 +7,90 @@
     <script src="./js/kikiplay.js"></script>
   </head>
   <body>
-    <h1 id="titleProyect">KikiGame</h1>
-    <p></p>
-    <section id="titleSelectPet">
-      <h2>Elige tu mascota:</h2>
-    </section>
-
-    <section id="selectPet">
-      <label>
-        <div class="card">
-          <div class="card-info">
-            <p class="title">HIPODOGE</p>
-          </div>
-        </div>
-        <input type="radio" name="mascota" id="hipodoge" />
-      </label>
-      <label>
-        <div class="card">
-          <div class="card-info">
-            <p class="title">CAPIPEPO</p>
-          </div>
-        </div>
-        <input type="radio" name="mascota" id="capipepo" />
-      </label>
-      <label>
-        <div class="card">
-          <div class="card-info">
-            <p class="title">RATIGUEYA</p>
-          </div>
-        </div>
-        <input type="radio" name="mascota" id="ratigueya" />
-      </label>
-    </section>
-
-    <p></p>
-    <p></p>
-    <section id="sectionButtonSelect">
-      <button id="buttonSelect">
-        <span>PLAY NOW</span>
-      </button>
-    </section>
-
-    <section id="selectAttack">
-      <h2>Elige tu ataque:</h2>
-      <p>
-        Tu mascota <span id="petPlayer"></span> tiene
-        <span id="lifePetPlayer">3</span> vidas
-      </p>
-      <p>
-        La mascota <span id="petEnemy"></span> del enemigo tiene
-        <span id="lifePetEnemy">3</span> vidas
-      </p>
-      <p>
-        <button id="buttonFire">Fuego 🔥</button>
-        <button id="buttonWater">Agua 💧</button>
-        <button id="buttonEarth">Tierra 🌱</button>
-      </p>
-    </section>
-
-    <section id="messages">
+    <div id="mainSection">
+      <h1 id="titleProyect">KikiGame</h1>
       <p></p>
-    </section>
+      <section id="titleSelectPet">
+        <h2>Elige tu mascota:</h2>
+      </section>
 
-    <section id="reset">
-      <button id="buttonReset">Reiniciar</button>
-    </section>
+      <section id="selectPet">
+        <label>
+          <div class="card">
+            <div class="card-info">
+              <p class="title">HIPODOGE</p>
+            </div>
+          </div>
+          <input type="radio" name="mascota" id="hipodoge" />
+        </label>
+        <label>
+          <div class="card">
+            <div class="card-info">
+              <p class="title">CAPIPEPO</p>
+            </div>
+          </div>
+          <input type="radio" name="mascota" id="capipepo" />
+        </label>
+        <label>
+          <div class="card">
+            <div class="card-info">
+              <p class="title">RATIGUEYA</p>
+            </div>
+          </div>
+          <input type="radio" name="mascota" id="ratigueya" />
+        </label>
+      </section>
+
+      <p></p>
+      <p></p>
+      <section id="sectionButtonSelect">
+        <button id="buttonSelect">
+          <span>PLAY NOW</span>
+        </button>
+      </section>
+
+      <section id="selectAttack">
+        <h2>Elige tu ataque:</h2>
+        <p>
+          Tu mascota <span id="petPlayer"></span> tiene
+          <span id="lifePetPlayer">3</span> vidas
+        </p>
+        <p>
+          La mascota <span id="petEnemy"></span> del enemigo tiene
+          <span id="lifePetEnemy">3</span> vidas
+        </p>
+        <p id="buttonAtack">
+          <buttonF id="buttonFire" class="noselect">
+            <span class="text">Fuego</span
+            ><span class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+                ></path></svg
+            ></span>
+          </buttonF>
+
+          <buttonA id="buttonWater">Agua 💧</buttonA>
+          <buttonT id="buttonEarth">Tierra 🌱</buttonT>
+        </p>
+      </section>
+
+      <section id="messages">
+        <p></p>
+      </section>
+
+      <section id="reset">
+        <button id="buttonReset">Reiniciar</button>
+      </section>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
   </body>
 </html>
