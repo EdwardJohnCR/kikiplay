@@ -33,6 +33,7 @@ input {
 #titleSelectPet {
   text-align: center;
   text-shadow: 2px 2px 2px #f7ba2b;
+  font-size: 20px;
 }
 #selectPet {
   display: flex;
@@ -49,36 +50,36 @@ input {
   text-align: center;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 20px;
 }
 #petPlayer {
-  color: #ffffff;
+  color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
 #lifePetPlayer {
-  color: #ffffff;
+  color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
 #petEnemy {
-  color: #ffffff;
+  color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
 #viewAttackPlayer {
-  color: #ffffff;
+  color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
 
 #atackRandomEnemy {
-  color: #ffffff;
+  color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
 #lifePetEnemy {
-  color: #ffffff;
+  color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
@@ -91,70 +92,34 @@ input {
 /*#############################*/
 /*############################*/
 
-button {
-  border: none;
-  position: relative;
-  width: 200px;
-  height: 73px;
-  padding: 0;
-  z-index: 2;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E")
-    no-repeat 50% 50%;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E")
-    no-repeat 50% 50%;
-  -webkit-mask-size: 100%;
+/* === removing default button style ===*/
+#buttonSelect {
   cursor: pointer;
-  background-color: transparent;
-  transform: translateY(8px);
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
 }
 
-button:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: 0px 0 0 0 white;
-  transition: all 2s ease;
-}
-
-button:hover:after {
-  box-shadow: 0px -13px 56px 12px #ffffffa6;
-}
-
-button span {
-  position: absolute;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 100;
-  left: 50%;
-  top: 39%;
+/* button styling */
+#buttonSelect {
+  --border-right: 6px;
+  --text-stroke-color: rgba(3, 3, 2, 0.863);
+  text-shadow: 0px 0px 0px #f7ba2b;
+  --fs-size: 3em;
   letter-spacing: 3px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  color: rgb(224, 201, 97);
-  transition: all 2s ease;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Fredoka One", cursive;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text-stroke-color);
 }
+/* this is the text, when you hover on button */
 
-button:hover span {
-  color: white;
-}
-
-button:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  background-color: black;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 1s ease;
-}
-
-button:hover:before {
-  width: 100%;
-}
+/* hover */
 
 /*##############################
 ##############################*/
@@ -178,42 +143,6 @@ button:hover:before {
   background: linear-gradient(to top, #46cf5d, #b2ee63);
 }
 
-#buttonWater {
-  font-family: arial;
-  font-weight: bold;
-  color: #fcfffd !important;
-  font-size: 14px;
-  text-shadow: 1px 1px 0px #000000;
-  box-shadow: 0px 2px 6px #000000;
-  padding: 9px 19px;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  background: #085b80;
-  background: linear-gradient(to top, #085b80, #11c8ff);
-}
-#buttonWater:hover {
-  color: #ffffff !important;
-  background: #11c8ff;
-  background: linear-gradient(to top, #11c8ff, #085b80);
-}
-#buttonEarth {
-  font-family: arial;
-  font-weight: bold;
-  color: #fcfffd !important;
-  font-size: 14px;
-  text-shadow: 1px 1px 0px #000000;
-  box-shadow: 0px 2px 6px #000000;
-  padding: 9px 19px;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  background: #804517;
-  background: linear-gradient(to top, #804517, #ffbd7a);
-}
-#buttonEarth:hover {
-  color: #ffffff !important;
-  background: #ffbd7a;
-  background: linear-gradient(to top, #ffbd7a, #804517);
-}
 /*##########################
 ###########################*/
 
@@ -275,64 +204,103 @@ button:hover:before {
   transition: color 1s;
 }
 
-buttonF {
-  width: 150px;
-  height: 50px;
+/*##########################
+##########################*/
+
+button {
+  position: relative;
+  padding: 1em 1.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: #f7ba2b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  background: red;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #e62222;
-}
-
-buttonF,
-buttonF span {
-  transition: 200ms;
-}
-
-buttonF .text {
-  transform: translateX(35px);
-  color: white;
   font-weight: bold;
 }
 
-buttonF .icon {
+button:hover {
+  box-shadow: 0 0 10px #ff00dd, 0 0 25px #e6b55b, 0 0 50px #f7ea35;
+  transition-delay: 0.6s;
+}
+
+button span {
   position: absolute;
-  border-left: 1px solid #c41b1b;
-  transform: translateX(110px);
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-buttonF svg {
-  width: 15px;
-  fill: #eee;
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e100ff);
 }
 
-buttonF:hover {
-  background: #ff3636;
+button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
 }
 
-buttonF:hover .text {
-  color: transparent;
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e100ff);
 }
 
-buttonF:hover .icon {
-  width: 150px;
-  border-left: none;
-  transform: translateX(0);
+button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
 }
 
-buttonF:focus {
-  outline: none;
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ff00ff);
 }
 
-buttonF:active .icon svg {
-  transform: scale(0.8);
+button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+}
+
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ff00ff);
+}
+
+button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+}
+
+button:active {
+  background: #f7ba2b;
+  background: linear-gradient(to top right, #ae00af, #f7ba2b);
+  color: #bfbfbf;
+  box-shadow: 0 0 8px #ae00ff, 0 0 8px #dfbe05, 0 0 8px #fffb00;
+  transition: 0.1s;
+}
+
+button:active
+  span:nth-child(1)
+  span:nth-child(2)
+  span:nth-child(2)
+  span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
 }
