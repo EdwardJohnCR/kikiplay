@@ -8,6 +8,7 @@ let lifeEnemy = 3;
 function runPlay() {
   let buttonPetPlayer = document.getElementById("buttonSelect");
   buttonPetPlayer.addEventListener("click", selectPetPlayer);
+  petLifeViewWeb.style.display = "none";
   selectAttack.style.display = "none";
   reset.style.display = "none";
 

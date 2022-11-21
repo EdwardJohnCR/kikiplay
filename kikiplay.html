@@ -53,20 +53,13 @@
 
       <section id="selectAttack">
         <h2>Elige tu ataque:</h2>
-        <p>
-          Tu mascota <span id="petPlayer"></span> tiene
-          <span id="lifePetPlayer">3</span> vidas
-        </p>
-        <p>
-          La mascota <span id="petEnemy"></span> del enemigo tiene
-          <span id="lifePetEnemy">3</span> vidas
-        </p>
+
         <p id="buttonAtack">
           <button id="buttonFire">
             <span></span>
             <span></span>
             <span></span>
-            <span></span> Fuergo
+            <span></span> Fuego
           </button>
 
           <button id="buttonWater">
@@ -90,7 +83,51 @@
       </section>
 
       <section id="reset">
-        <button id="buttonReset">Reiniciar</button>
+        <button id="buttonReset">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span> Reiniciar
+        </button>
+      </section>
+
+      <section id="petLifeViewWeb">
+        <div>
+          <p>
+            tiene
+            <span id="lifePetPlayer">3</span> vidas
+          </p>
+          <p>
+            La mascota <span id="petEnemy"></span> del enemigo tiene
+            <span id="lifePetEnemy">3</span> vidas
+          </p>
+        </div>
+      </section>
+
+      <section id="infoAttackView">
+        <div>
+          <div class="card2">
+            <div class="card-top">
+              <p class="card__title"><span id="petPlayer"></span></p>
+              <div class="rating">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                  <path
+                    fill="#00B9AE"
+                    stroke="#00B9AE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="card__info">
+              <p class="episode__num">ATAQUE</p>
+              <p class="episode__type">Fantasy</p>
+            </div>
+            <div class="card__btns"></div>
+          </div>
+        </div>
       </section>
       <p></p>
       <p></p>
