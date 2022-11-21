@@ -8,9 +8,10 @@ let lifeEnemy = 3;
 function runPlay() {
   let buttonPetPlayer = document.getElementById("buttonSelect");
   buttonPetPlayer.addEventListener("click", selectPetPlayer);
-  petLifeViewWeb.style.display = "none";
   selectAttack.style.display = "none";
   reset.style.display = "none";
+  infoAttackView.style.display = "none";
+  mainMessages.style.display = "none";
 
   let btnFire = document.getElementById("buttonFire");
   btnFire.addEventListener("click", attackFire);
@@ -28,6 +29,7 @@ function selectPetPlayer() {
   titleSelectPet.style.display = "none";
   sectionButtonSelect.style.display = "none";
   selectAttack.style.display = "block";
+  infoAttackView.style.display = "flex";
 
   let inputHipodoge = document.getElementById("hipodoge");
   let inputCapipepo = document.getElementById("capipepo");
@@ -129,7 +131,7 @@ function reviewLives() {
   if (lifeEnemy == 0) {
     createEndMessage("GANASTE");
   } else if (lifePlayer == 0) {
-    createEndMessage("PERDISTE :( ");
+    createEndMessage("PERDISTE");
   }
 }
 //sen message to HTML
@@ -151,7 +153,9 @@ function createMessage(result) {
 function createEndMessage(resultEnd) {
   selectAttack.style.display = "none";
   reset.style.display = "block";
-  let sectionMessage = document.getElementById("messages");
+  mainMessages.style.display = "block";
+
+  let sectionMessage = document.getElementById("messageResult");
 
   let paragraph = document.createElement("p");
   paragraph.innerHTML = resultEnd;

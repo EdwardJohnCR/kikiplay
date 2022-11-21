@@ -76,6 +76,7 @@ input {
 /*#############################*/
 /*############################*/
 #lifePetPlayer {
+  text-align: right;
   color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
@@ -104,10 +105,17 @@ input {
 /*#############################*/
 /*############################*/
 #lifePetEnemy {
+  text-align: right;
   color: #f7ba2b;
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
+
+/*#mainMessages {
+  text-align: center;
+  text-shadow: 2px 2px 2px #f7ba2b;
+}
+
 /*#############################*/
 /*############################*/
 #messages {
@@ -337,10 +345,16 @@ button:active
 
 /* view attack, pet and live */
 /* view attack, pet and live */
-
+#infoAttackView {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 .card2 {
-  --width: 190px;
-  --height: 210px;
+  --width: 160px;
+  --height: 150px;
   --primary: #00b9ae;
   --text: #f9f9f9b2;
   --secondary: #f9f9f933;
@@ -420,4 +434,62 @@ button:active
 
 .card2 .watch-btn {
   flex: 1;
+}
+/*########################
+########################*/
+
+.loader {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 5px solid #e74c3c;
+  position: relative;
+  animation: load 2s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.loader::before {
+  border-top: 5px solid #e67e22;
+  transform: rotate(120deg);
+}
+
+.loader::after {
+  border-top: 5px solid #dbd834;
+  transform: rotate(240deg);
+}
+
+.loader span {
+  position: absolute;
+  font-size: 25px;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000000;
+  text-align: center;
+  line-height: 100px;
+  animation: a2 2s linear infinite;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
 }
