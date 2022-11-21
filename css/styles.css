@@ -111,6 +111,19 @@ input {
   text-shadow: 1px 1px 1px #000000;
 }
 
+#ResultDinamic {
+  text-align: center;
+  color: #f7ba2b;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000000;
+}
+#RD {
+  text-align: center;
+  color: #f7ba2b;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
 /*#mainMessages {
   text-align: center;
   text-shadow: 2px 2px 2px #f7ba2b;
@@ -404,6 +417,8 @@ button:active
 
 .card2 .card__btns {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.6rem;
 }
 
