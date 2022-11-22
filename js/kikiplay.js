@@ -137,21 +137,25 @@ function reviewLives() {
 //sen message to HTML
 function createMessage(result) {
   let sectionMessage = document.getElementById("ResultDinamic");
-  sectionMessage.innerHTML =
-    /*let paragraph = document.createElement("p");
-  paragraph.innerHTML =
-    "Tu mascota atacó con " +
-    attackPlayer +
-    ", la mascota del enemigo atacó con " +
-    attackEnemy +
-    " " +*/
-    result;
+  let viewAttackPlayerCard = document.getElementById("viewAttackPlayerCard");
+  let viewAttackEnemyCard = document.getElementById("viewAttackEnemyCard");
 
-  /*sectionMessage.appendChild(paragraph);*/
+  let notification = document.createElement("p");
+  let newAttackPlayer = document.createElement("p");
+  let newAttackEnemy = document.createElement("p");
+
+  notification.innerHTML = result;
+  newAttackPlayer.innerHTML = attackPlayer;
+  newAttackEnemy.innerHTML = attackEnemy;
+
+  sectionMessage.appendChild(notification);
+  viewAttackPlayerCard.appendChild(newAttackPlayer);
+  viewAttackEnemyCard.appendChild(newAttackEnemy);
 }
 
 function createEndMessage(resultEnd) {
   selectAttack.style.display = "none";
+
   reset.style.display = "block";
   mainMessages.style.display = "block";
 

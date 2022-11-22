@@ -123,6 +123,12 @@ input {
   font-size: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
+#VAPC {
+  text-align: center;
+  color: #f7ba2b;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000000;
+}
 
 /*#mainMessages {
   text-align: center;
@@ -364,6 +370,18 @@ button:active
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+#viewAttackPlayerCard {
+  text-align: center;
+  color: #f7ba2b;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000000;
+}
+#viewAttackEnemyCard {
+  text-align: center;
+  color: #f7ba2b;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000000;
 }
 .card2 {
   --width: 160px;
